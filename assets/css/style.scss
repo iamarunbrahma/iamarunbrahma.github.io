@@ -11,3 +11,26 @@ body {
 a, a:visited {
     color: #197d25; /* Change the link color */
   }
+img {
+    width: 50%;
+    height: auto; /* Adjust image size */
+  }
+ol { /* Ordered list styling */
+    padding-left: 20px;
+    list-style-type: decimal;
+  
+    li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+  
+      &:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+        color: #333;
+        font-weight: bold;
+      }
+    }
+  }
+ol ol {
+    counter-reset: item;
+  }
