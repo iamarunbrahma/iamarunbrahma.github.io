@@ -15,23 +15,23 @@ I have done few open-source contributions at [GitHub](https://github.com/iamarun
 
 ## Projects:
 1. **Fine-tuning of open-source LLM using QLoRA**  
-[Technical Blog](https://medium.com/@iamarunbrahma/fine-tuning-of-falcon-7b-large-language-model-using-qlora-on-mental-health-dataset-aa290eb6ec85)
+([Technical Blog](https://medium.com/@iamarunbrahma/fine-tuning-of-falcon-7b-large-language-model-using-qlora-on-mental-health-dataset-aa290eb6ec85))
 Fine-tuned a Falcon-7B large language model on custom mental health conversational dataset using Low-Rank Adaptation of Quantized LLMs (QLoRA). The dataset was curated from online healthcare blogs, FAQs etc and removed personally identifiable information (PII). Achieved a ROUGE-1 score of 0.37 on the test dataset.
   
 2. **Prompt Testing Framework for LLMs**  
-[GitHub Code](https://github.com/iamarunbrahma/llm-prompt-testing)
+([GitHub Code](https://github.com/iamarunbrahma/llm-prompt-testing))
 Designed a prompt testing framework for LLMs to compare and test prompt quality for multiple system prompts based on the generated answers. Measured answer accuracy using multiple NLP metrics i.e. ROUGE, BLEU, and BERTScore and multiple Responsible AI metrics i.e. Faithfulness, Answer Relevancy Score, Harmfulness etc. Achieved a 27% improvement in system prompt quality for different LLM applications.
   
 3. **Youtube AI Assistant using Langchain**  
-[GitHub Code](https://github.com/iamarunbrahma/youtube-ai-assistant)
+([GitHub Code](https://github.com/iamarunbrahma/youtube-ai-assistant))
 Designed an end-to-end Retrieval Augmented Generation pipeline to generate summarized text using GPT-3.5-Turbo LLM for YouTube video transcripts and built a conversational AI system to get instant answers for YouTube video transcripts. Used Qdrant Vector DB to retrieve transcript chunk embeddings and GPT-3.5-Turbo LLM from Langchain to generate answers thereby achieving BLEU score of 0.75.
   
 4. **Product Description Generator**  
-[GitHub Code](https://github.com/iamarunbrahma/product-description-generator)
+([GitHub Code](https://github.com/iamarunbrahma/product-description-generator))
 Generated SEO-compliant product description using product title and meta-keywords provided by the user. Implemented custom LLMChain function from the Langchain and few-shot prompting technique to generate multi-paragraph rich text product description for each product name and its corresponding keywords. Built a gradio app as a frontend demo to showcase the technique.
   
 ## Consult:
-Check my services here:  [Consultation](https://topmate.io/arun_brahma)
+Check out my services here: [Online Consultation](https://topmate.io/arun_brahma)
 
 ## Social:
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:mithubrahma94@gmail.com)
