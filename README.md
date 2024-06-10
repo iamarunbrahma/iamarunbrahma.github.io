@@ -2,7 +2,7 @@
 
 Hi!  
 I am a Lead Machine Learning Engineer at Citi, building AI-enabled products for finance using large language models (LLMs) and advanced NLP techniques.
-I have more than 8 years of work experience in Data Science and Machine Learning. I have collaborated with few startups such as [Wellma Health](https://www.wellmahealth.com/) and AltGAN in developing Generative AI applications using retrieval augmented generation (RAG).
+I have more than 8 years of work experience in Data Science and Machine Learning. I have collaborated with [Wellma Health](https://www.wellmahealth.com/) in developing Generative AI applications using retrieval augmented generation (RAG).
 
 I have done few open-source contributions at [GitHub](https://github.com/iamarunbrahma).  My current interest lies in LLM fine-tuning, reasoning, alignment of LLMs, and RAG applications.
 
