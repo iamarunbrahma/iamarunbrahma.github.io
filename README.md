@@ -1,8 +1,8 @@
 # About Me
 
 Hi!  
-I am a Senior Machine Learning Engineer at Citi, building AI-enabled products for finance using large language models (LLMs) and advanced NLP techniques.
-I have more than 7 years of work experience in Data Science and Machine Learning. I have collaborated with few startups such as [Wellma Health](https://www.wellmahealth.com/) and AltGAN in developing Generative AI applications using retrieval augmented generation (RAG).
+I am a Lead Machine Learning Engineer at Citi, building AI-enabled products for finance using large language models (LLMs) and advanced NLP techniques.
+I have more than 8 years of work experience in Data Science and Machine Learning. I have collaborated with few startups such as [Wellma Health](https://www.wellmahealth.com/) and AltGAN in developing Generative AI applications using retrieval augmented generation (RAG).
 
 I have done few open-source contributions at [GitHub](https://github.com/iamarunbrahma).  My current interest lies in LLM fine-tuning, reasoning, alignment of LLMs, and RAG applications.
 
@@ -30,10 +30,10 @@ Designed an end-to-end Retrieval Augmented Generation pipeline to generate summa
 ([GitHub Code](https://github.com/iamarunbrahma/product-description-generator))
 Generated SEO-compliant product description using product title and meta-keywords provided by the user. Implemented custom LLMChain function from the Langchain and few-shot prompting technique to generate multi-paragraph rich text product description for each product name and its corresponding keywords. Built a gradio app as a frontend demo to showcase the technique.
   
-## Consult:
-Check out my services here: [Online Consultation](https://topmate.io/arun_brahma)
+<!-- ## Consult:
+Check out my services here: [Online Consultation](https://topmate.io/arun_brahma) -->
 
-## Social:
+## Connect with me:
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:mithubrahma94@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat-square&logo=Github&logoColor=white)](https://github.com/iamarunbrahma)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/iamarunbrahma)
