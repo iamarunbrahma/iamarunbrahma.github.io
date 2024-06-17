@@ -11,3 +11,14 @@ body {
 a, a:visited {
     color: #197d25; /* Change the link color */
   }
+.logo-img  {
+max-width: 70%; /* Make the image fully responsive */
+height: auto; /* Maintain aspect ratio */
+// display: block; /* Display block to apply margin auto */
+// margin: 0 auto; /* Center the image */
+}
+@media (max-width: 768px) {
+  .logo-img {
+    max-width: 50%; /* Adjust based on your design needs */
+  }
+}
