@@ -4,5 +4,3 @@ description: Lead Machine Learning Engineer (LLMs (fine-tuning, alignment, quant
 show_downloads: false
 theme: jekyll-theme-minimal
 markdown: kramdown
-plugins:
-  - jekyll-seo-tag
