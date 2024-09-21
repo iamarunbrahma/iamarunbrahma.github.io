@@ -9,6 +9,14 @@
 
 <!-- end custom head snippets -->
 
-<div class="logo-container">
-    <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" class="logo-img">
-</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.querySelector('header');
+      if (header) {
+        var logoContainer = document.createElement('div');
+        logoContainer.className = 'logo-container';
+        logoContainer.innerHTML = '<img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" class="logo-img">';
+        header.insertBefore(logoContainer, header.firstChild);
+      }
+    });
+</script>
