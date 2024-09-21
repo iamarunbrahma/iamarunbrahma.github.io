@@ -30,15 +30,22 @@ a {
 
 header {
   width: 270px;
-  float: left;
   position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #fff;
+  border-right: 1px solid #e1e4e8;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 section {
+  margin-left: 270px;
+  padding: 20px;
+  box-sizing: border-box;
   width: calc(100% - 270px);
-  float: right;
-  padding-bottom: 30px;
-  padding-left: 30px;
 }
 
 .logo-container {
@@ -94,6 +101,7 @@ section {
     width: 100%;
     float: none;
     padding-left: 0;
+    margin-left: 0;
   }
 
   .logo-img {
