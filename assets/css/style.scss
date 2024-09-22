@@ -94,6 +94,7 @@ a {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  margin-bottom: 0; /* Ensure no extra margin at the bottom */
 }
 
 header {
@@ -115,7 +116,7 @@ section {
   box-sizing: border-box;
   width: calc(100% - 350px);
   margin-top: 60px; /* Adjusted to account for the navbar height */
-  margin-bottom: 60px; /* Adjusted to account for the footer height */
+  margin-bottom: 0; /* Ensure no extra margin at the bottom */
   scroll-margin-top: 60px; /* Ensure headers are visible below the navbar */
   min-height: calc(100vh - 120px); /* Stretch to full viewport height minus navbar and footer */
 }
