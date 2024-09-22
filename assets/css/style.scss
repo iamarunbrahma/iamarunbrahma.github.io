@@ -12,10 +12,10 @@ body {
 .navbar {
   background-color: var(--navbar-background); /* Use variable for background color */
   border-bottom: 1px solid #e1e4e8;
-  padding: 10px 20px; /* Adjust padding */
+  padding: 5px 20px; /* Adjust padding to reduce vertical size */
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100%; /* Ensure full width */
   z-index: 1000;
   display: flex;
   justify-content: center; /* Center items horizontally */
@@ -26,6 +26,7 @@ body {
   display: flex;
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
+  width: 100%; /* Ensure full width */
 }
 
 .navbar .nav {
@@ -78,11 +79,11 @@ a {
 }
 
 header {
-  width: 350px; /* Increased from 270px to 350px */
+  width: 350px; /* Sidebar width */
   position: fixed;
   top: 60px; /* Adjusted to account for the navbar height */
   left: 0;
-  height: calc(100% - 120px); /* Adjusted to account for the navbar and footer height */
+  bottom: 0; /* Extend to the bottom */
   overflow-y: auto;
   background-color: #fff;
   border-right: 1px solid #e1e4e8;
@@ -147,6 +148,8 @@ section {
     width: 100%;
     position: static;
     float: none;
+    top: 60px; /* Adjusted to account for the navbar height */
+    bottom: 60px; /* Extend to the bottom */
   }
 
   section {
@@ -288,6 +291,27 @@ a {
   border: 2px solid;
   border-radius: 50%;
   padding: 5px;
+}
+
+.navbar .theme-icon {
+  cursor: pointer;
+  font-size: 2em; /* Increase the size */
+  margin-left: 20px;
+  border: 2px solid;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.navbar .theme-icon.fa-sun {
+  color: yellow;
+  border-color: yellow;
+  background-color: transparent; /* Make it hollow */
+}
+
+.navbar .theme-icon.fa-moon {
+  color: grey;
+  border-color: grey;
+  background-color: transparent; /* Make it hollow */
 }
 
 .theme-icon.fa-sun {
