@@ -9,6 +9,69 @@ body {
   color: #24292e;
 }
 
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e1e4e8;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #005f73;
+  text-decoration: none;
+}
+
+.navbar nav {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.navbar .nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar .nav li {
+  display: inline;
+}
+
+.navbar .nav a {
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: bold;
+}
+
+.navbar .nav a:hover {
+  color: #023e8a;
+}
+
+.navbar .hire-me .btn {
+  background-color: #0077b6;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.navbar .hire-me .btn:hover {
+  background-color: #023e8a;
+}
+
 h1, h2, h3 {
   color: #005f73;
 }
@@ -31,9 +94,9 @@ a {
 header {
   width: 350px; /* Increased from 270px to 350px */
   position: fixed;
-  top: 0;
+  top: 60px; /* Adjusted to account for the navbar height */
   left: 0;
-  height: 100%;
+  height: calc(100% - 120px); /* Adjusted to account for the navbar and footer height */
   overflow-y: auto;
   background-color: #fff;
   border-right: 1px solid #e1e4e8;
@@ -46,6 +109,8 @@ section {
   padding: 20px;
   box-sizing: border-box;
   width: calc(100% - 350px);
+  margin-top: 60px; /* Adjusted to account for the navbar height */
+  margin-bottom: 60px; /* Adjusted to account for the footer height */
 }
 
 .logo-container {
@@ -138,4 +203,37 @@ nav {
 
 .nav a:hover {
   color: #023e8a;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e1e4e8;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 1000;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a img {
+  height: 24px;
+  width: 24px;
 }
