@@ -90,11 +90,11 @@ a {
 }
 
 .wrapper {
-  max-width: 960px;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  margin-bottom: 0; /* Ensure no extra margin at the bottom */
+  align-items: stretch;
+  margin-bottom: 0;
 }
 
 header {
@@ -120,6 +120,7 @@ section {
   scroll-margin-top: 60px;
   min-height: calc(100vh - 120px);
   max-width: none;
+  flex-grow: 1;
 }
 
 .logo-container {
@@ -388,8 +389,23 @@ a {
   }
 
   .navbar .theme-icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    padding: 8px;
+    margin-left: 0;
+  }
+
+  .navbar .dropdown-content {
     padding: 10px;
+  }
+
+  .navbar .dropdown-content a {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+
+  .navbar .theme-toggle {
+    text-align: left;
+    margin-top: 10px;
   }
 }
 
