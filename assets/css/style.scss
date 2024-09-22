@@ -349,6 +349,14 @@ a {
     }
   }
 
+  .navbar .hamburger-icon.hide {
+    display: none;
+  }
+
+  .navbar .close-icon.show {
+    display: block;
+  }
+
   .navbar .dropdown {
     display: block;
     cursor: pointer;
@@ -402,5 +410,11 @@ a {
     font-size: 1.3rem;
     padding: 5px;
     margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .navbar .dropdown-content {
+    display: none !important;
   }
 }
