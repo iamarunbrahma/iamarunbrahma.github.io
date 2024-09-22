@@ -53,6 +53,9 @@ body {
   font-size: 1.2em; /* Increase font size */
   padding: 10px 15px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .navbar .nav a:hover,
@@ -217,6 +220,7 @@ nav {
   box-sizing: border-box;
   text-align: center;
   z-index: 1000;
+  color: var(--text-color);
 }
 
 .footer-content {
@@ -228,7 +232,7 @@ nav {
 .footer-content p {
   margin: 5px 0;
   font-size: 0.9em; /* Smaller text */
-  color: #555; /* Better design */
+  color: inherit;
 }
 
 .social-icons {
@@ -254,7 +258,7 @@ nav {
   --background-color: #121212;
   --text-color: #e0e0e0;
   --link-color: #bb86fc; /* Ensure link color remains unchanged */
-  --link-hover-color: #3700b3;
+  --link-hover-color: #8a2be2;
   --navbar-background: #333; /* Dark background for navbar */
   --footer-background: #222;
   --header-color: #ffffff; /* White headers */
@@ -289,42 +293,24 @@ a {
 
 .theme-icon {
   cursor: pointer;
-  font-size: 2em; /* Increase the size */
-  margin-left: 20px;
-  border: 2px solid;
-  border-radius: 50%;
-  padding: 5px;
 }
 
 .navbar .theme-icon {
   cursor: pointer;
-  font-size: 2em; /* Increase the size */
+  font-size: 2.5em; /* Increase the size */
   margin-left: 20px;
-  border: 2px solid;
+  border: 3px solid;
   border-radius: 50%;
   padding: 5px;
+  background-color: transparent;
 }
 
 .navbar .theme-icon.fa-sun {
   color: yellow;
   border-color: yellow;
-  background-color: transparent; /* Make it hollow */
 }
 
 .navbar .theme-icon.fa-moon {
   color: grey;
   border-color: grey;
-  background-color: transparent; /* Make it hollow */
-}
-
-.theme-icon.fa-sun {
-  color: yellow;
-  border-color: yellow;
-  background-color: transparent; /* Make it hollow */
-}
-
-.theme-icon.fa-moon {
-  color: grey;
-  border-color: grey;
-  background-color: transparent; /* Make it hollow */
 }
