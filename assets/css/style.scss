@@ -158,11 +158,19 @@ section {
   .logo-img {
     max-width: 150px;
   }
+
+  .navbar {
+    padding: 5px 10px; /* Adjust padding for smaller devices */
+  }
 }
 
 @media print, screen and (max-width: 480px) {
   .logo-img {
     max-width: 120px;
+  }
+
+  .navbar {
+    padding: 5px 5px; /* Further adjust padding for very small devices */
   }
 }
 
@@ -238,15 +246,20 @@ nav {
 [data-theme="dark"] {
   --background-color: #121212;
   --text-color: #e0e0e0;
-  --link-color: #bb86fc;
+  --link-color: #bb86fc; /* Ensure link color remains unchanged */
   --link-hover-color: #3700b3;
   --navbar-background: #333;
   --footer-background: #222;
+  --header-color: #ffffff; /* White headers */
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+}
+
+h1, h2, h3 {
+  color: var(--header-color); /* Apply header color */
 }
 
 .navbar {
