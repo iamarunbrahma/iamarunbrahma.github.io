@@ -117,6 +117,7 @@ section {
   margin-top: 60px; /* Adjusted to account for the navbar height */
   margin-bottom: 60px; /* Adjusted to account for the footer height */
   scroll-margin-top: 60px; /* Ensure headers are visible below the navbar */
+  min-height: calc(100vh - 120px); /* Stretch to full viewport height minus navbar and footer */
 }
 
 .logo-container {
@@ -334,37 +335,21 @@ a {
 
   .navbar .hamburger-menu {
     display: block;
-  }
-
-  .navbar .hamburger-icon {
-    display: block;
-  }
-
-  .navbar .menu-open {
-    .hamburger-icon {
-      display: none;
-    }
-    .close-icon {
-      display: block;
-    }
-  }
-
-  .navbar .hamburger-icon.hide {
-    display: none;
-  }
-
-  .navbar .close-icon.show {
-    display: block;
-  }
-
-  .navbar .dropdown {
-    display: block;
     cursor: pointer;
+  }
+
+  .navbar .hamburger-icon,
+  .navbar .close-icon {
+    font-size: 24px;
+  }
+
+  .navbar .close-icon {
+    display: none;
   }
 
   .navbar .dropdown-content {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 60px;
     left: 0;
     right: 0;
@@ -372,10 +357,6 @@ a {
     padding: 10px;
     box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
     z-index: 1000;
-  }
-
-  .navbar .menu-open .dropdown-content {
-    display: block;
   }
 
   .navbar .dropdown-content a {
@@ -389,10 +370,6 @@ a {
   .navbar .dropdown-content a:hover {
     color: var(--link-hover-color);
     background-color: #ddd;
-  }
-
-  .navbar .dropdown:hover .dropdown-content {
-    display: block;
   }
 
   .navbar .theme-toggle {

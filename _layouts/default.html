@@ -85,9 +85,9 @@
 
         hamburgerMenu.addEventListener('click', function() {
           navbar.classList.toggle('menu-open');
-          dropdownContent.classList.toggle('show');
-          hamburgerIcon.classList.toggle('hide');
-          closeIcon.classList.toggle('show');
+          dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+          hamburgerIcon.style.display = hamburgerIcon.style.display === 'none' ? 'block' : 'none';
+          closeIcon.style.display = closeIcon.style.display === 'block' ? 'none' : 'block';
         });
       });
     </script>
