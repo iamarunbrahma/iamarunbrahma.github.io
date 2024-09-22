@@ -50,12 +50,13 @@ body {
   text-decoration: none;
   color: var(--link-color);
   font-weight: bold;
-  font-size: 1.2em; /* Increase font size */
+  font-size: 1.2rem; /* Increase font size */
   padding: 10px 15px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   height: 100%;
+  transition: font-size 0.3s ease;
 }
 
 .navbar .nav a:hover,
@@ -296,21 +297,46 @@ a {
 }
 
 .navbar .theme-icon {
-  cursor: pointer;
-  font-size: 2.5em; /* Increase the size */
+  font-size: 2.5rem; /* Increase the size */
   margin-left: 20px;
   border: 3px solid;
   border-radius: 50%;
   padding: 5px;
   background-color: transparent;
+  transition: font-size 0.3s ease, padding 0.3s ease;
 }
 
 .navbar .theme-icon.fa-sun {
-  color: yellow;
-  border-color: yellow;
+  color: yellow !important;
+  border-color: yellow !important;
 }
 
 .navbar .theme-icon.fa-moon {
-  color: grey;
-  border-color: grey;
+  color: grey !important;
+  border-color: grey !important;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .nav a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .navbar .theme-icon {
+    font-size: 1.5rem;
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar .nav a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .navbar .theme-icon {
+    font-size: 1.3rem;
+    padding: 5px;
+    margin-left: 10px;
+  }
 }
