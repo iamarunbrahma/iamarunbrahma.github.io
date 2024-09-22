@@ -12,7 +12,7 @@ body {
 .navbar {
   background-color: var(--navbar-background); /* Use variable for background color */
   border-bottom: 1px solid #e1e4e8;
-  padding: 5px 20px; /* Adjust padding to reduce vertical size */
+  padding: 5px 10px; /* Adjust padding to reduce vertical size */
   position: fixed;
   top: 0;
   left: 0; /* Ensure it starts from the left end */
@@ -211,9 +211,9 @@ nav {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #f8f9fa;
+  background-color: var(--footer-background); /* Use the CSS variable */
   border-top: 1px solid #e1e4e8;
-  padding: 5px 20px; /* Reduced padding */
+  padding: 5px 10px; /* Reduced padding */
   box-sizing: border-box;
   text-align: center;
   z-index: 1000;
