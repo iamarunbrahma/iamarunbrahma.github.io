@@ -2,10 +2,12 @@ title: Arun Brahma
 logo: /assets/img/arun_brahma.png
 description: Lead Machine Learning Engineer at Citi (Retrieval Augmented Generation, LLM Fine-tuning, Alignment of LLMs, Quantization, and Reasoning).
 show_downloads: false
+is_project_page: true
 theme: jekyll-theme-minimal
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+url: https://arunbrahma.com
 author: Arun Brahma
 social:
   name: Arun Brahma
