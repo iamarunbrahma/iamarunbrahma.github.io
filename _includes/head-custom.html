@@ -25,32 +25,6 @@
         document.documentElement.setAttribute('data-theme', 'light');
       }
     });
-
-    // Smooth scrolling
-    document.querySelectorAll('.nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    // Highlight active link
-    window.addEventListener('scroll', function() {
-      var fromTop = window.scrollY;
-      document.querySelectorAll('.nav a').forEach(link => {
-        var section = document.querySelector(link.getAttribute('href'));
-        if (
-          section.offsetTop <= fromTop &&
-          section.offsetTop + section.offsetHeight > fromTop
-        ) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
-      });
-    });
   });
 </script>
 <!-- end custom head snippets -->

@@ -29,7 +29,7 @@
     </div>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <h1><a href="{{ "/" | absolute_url }}"><img src="{{ site.logo | relative_url }}" alt="{{ site.title }}"></a></h1>
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
@@ -39,6 +39,20 @@
 
         {% if site.github.is_user_page %}
         <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+        <div class="social-icons">
+          <a href="mailto:mithubrahma94@gmail.com">
+            <img src="https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email">
+          </a>
+          <a href="https://github.com/iamarunbrahma">
+            <img src="https://img.shields.io/badge/GitHub-black?style=flat-square&logo=Github&logoColor=white" alt="GitHub">
+          </a>
+          <a href="https://www.linkedin.com/in/iamarunbrahma">
+            <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
+          </a>
+          <a href="https://medium.com/@iamarunbrahma">
+            <img src="https://img.shields.io/badge/Medium-grey?style=flat-square&logo=medium&logoColor=white" alt="Medium">
+          </a>
+        </div>
         {% endif %}
 
       </header>
@@ -52,7 +66,7 @@
           {% if site.github.is_project_page %}
           <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
           {% endif %}
-          <p>&copy; <span id="current-year"></span> Arun Brahma. All rights reserved.</p>
+          <p>&copy; <span id="current-year"></span> <i>Arun Brahma</i>. All rights reserved.</p>
         </div>
       </footer>
     </div>
