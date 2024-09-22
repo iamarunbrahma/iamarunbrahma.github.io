@@ -21,15 +21,8 @@ body {
 
 .navbar .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the navigation items */
   align-items: center;
-}
-
-.navbar .logo a {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #005f73;
-  text-decoration: none;
 }
 
 .navbar nav {
@@ -54,22 +47,15 @@ body {
   text-decoration: none;
   color: #0077b6;
   font-weight: bold;
-}
-
-.navbar .nav a:hover {
-  color: #023e8a;
-}
-
-.navbar .hire-me .btn {
-  background-color: #0077b6;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
+  padding: 10px 15px;
   border-radius: 5px;
 }
 
-.navbar .hire-me .btn:hover {
-  background-color: #023e8a;
+.navbar .nav a:hover,
+.navbar .nav a:focus,
+.navbar .nav a.active {
+  background-color: #e1e4e8;
+  color: #023e8a;
 }
 
 h1, h2, h3 {
