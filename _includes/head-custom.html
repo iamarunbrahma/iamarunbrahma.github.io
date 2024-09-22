@@ -11,11 +11,12 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const themeSwitcher = document.createElement('div');
+    themeSwitcher.style.float = 'right';
     themeSwitcher.innerHTML = `
       <label for="theme-toggle">Light/Dark Theme:</label>
       <input type="checkbox" id="theme-toggle">
     `;
-    document.body.insertBefore(themeSwitcher, document.body.firstChild);
+    document.querySelector('.nav').appendChild(themeSwitcher);
 
     const toggle = document.getElementById('theme-toggle');
     toggle.addEventListener('change', function() {
