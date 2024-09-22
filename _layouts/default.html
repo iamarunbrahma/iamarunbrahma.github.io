@@ -87,6 +87,15 @@
           hamburgerIcon.style.display = hamburgerIcon.style.display === 'none' ? 'block' : 'none';
           closeIcon.style.display = closeIcon.style.display === 'block' ? 'none' : 'block';
         });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!navbar.contains(event.target) && dropdownContent.style.display === 'block') {
+            dropdownContent.style.display = 'none';
+            hamburgerIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+          }
+        });
       });
     </script>
   </body>

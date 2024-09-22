@@ -111,14 +111,15 @@ header {
 }
 
 section {
-  margin-left: 350px; /* Adjusted to match the new sidebar width */
+  margin-left: 350px;
   padding: 20px;
   box-sizing: border-box;
   width: calc(100% - 350px);
-  margin-top: 60px; /* Adjusted to account for the navbar height */
-  margin-bottom: 0; /* Ensure no extra margin at the bottom */
-  scroll-margin-top: 60px; /* Ensure headers are visible below the navbar */
-  min-height: calc(100vh - 120px); /* Stretch to full viewport height minus navbar and footer */
+  margin-top: 60px;
+  margin-bottom: 0;
+  scroll-margin-top: 60px;
+  min-height: calc(100vh - 120px);
+  max-width: none;
 }
 
 .logo-container {
@@ -351,31 +352,44 @@ a {
 
   .navbar .dropdown-content {
     display: none;
-    position: fixed; /* Changed from absolute to fixed */
+    position: fixed;
     top: 60px;
     left: 0;
     right: 0;
+    bottom: 0;
     background-color: var(--navbar-background);
-    padding: 10px;
+    padding: 20px;
     box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
     z-index: 1000;
+    overflow-y: auto;
   }
 
   .navbar .dropdown-content a {
     display: block;
     color: var(--link-color);
-    padding: 10px 0;
+    padding: 15px 0;
     text-decoration: none;
     font-size: 1.1rem;
+    border-bottom: 1px solid var(--text-color);
+  }
+
+  .navbar .dropdown-content a:last-child {
+    border-bottom: none;
   }
 
   .navbar .dropdown-content a:hover {
     color: var(--link-hover-color);
-    background-color: #ddd;
+    background-color: rgba(221, 221, 221, 0.1);
   }
 
   .navbar .theme-toggle {
     margin-top: 20px;
+    text-align: center;
+  }
+
+  .navbar .theme-icon {
+    font-size: 2rem;
+    padding: 10px;
   }
 }
 
@@ -386,9 +400,8 @@ a {
   }
 
   .navbar .theme-icon {
-    font-size: 1.3rem;
-    padding: 5px;
-    margin-left: 10px;
+    font-size: 1.8rem;
+    padding: 8px;
   }
 }
 
