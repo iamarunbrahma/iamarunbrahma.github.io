@@ -18,12 +18,13 @@ body {
   width: 100%;
   z-index: 1000;
   display: flex;
+  justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
 }
 
 .navbar .container {
   display: flex;
-  justify-content: space-between; /* Space between items */
+  justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
 }
 
@@ -285,7 +286,7 @@ a {
 
 .theme-icon {
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 1.8em; /* Increase the size */
   margin-left: 20px;
   border: 2px solid;
   border-radius: 50%;
@@ -295,9 +296,11 @@ a {
 .theme-icon.fa-sun {
   color: yellow;
   border-color: yellow;
+  background-color: transparent; /* Make it hollow */
 }
 
 .theme-icon.fa-moon {
-  color: white;
-  border-color: white;
+  color: grey;
+  border-color: grey;
+  background-color: transparent; /* Make it hollow */
 }
