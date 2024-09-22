@@ -63,7 +63,7 @@ body {
 .navbar .nav a:focus,
 .navbar .nav a.active {
   background-color: #e1e4e8;
-  color: #023e8a;
+  color: var(--link-hover-color);
 }
 
 h1, h2, h3 {
