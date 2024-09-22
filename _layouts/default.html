@@ -21,15 +21,27 @@
   <body>
     <div class="navbar">
       <div class="container">
-        <nav>
-          <ul class="nav">
-            <li><a href="#about-me" class="nav-link">About</a></li>
-            <li><a href="#technical-skills" class="nav-link">Technical Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="https://medium.com/@iamarunbrahma" class="nav-link external-link">Blog</a></li>
-            <li><a href="mailto:mithubrahma94@gmail.com" class="nav-link external-link">Hire Me</a></li>
-          </ul>
-        </nav>
+        <ul class="nav">
+          <li><a href="#about-me" class="nav-link">About</a></li>
+          <li><a href="#technical-skills" class="nav-link">Technical Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="https://medium.com/@iamarunbrahma" class="nav-link external-link">Blog</a></li>
+          <li><a href="mailto:mithubrahma94@gmail.com" class="nav-link external-link">Hire Me</a></li>
+        </ul>
+        <div class="hamburger-menu">
+          <span class="hamburger-icon">☰</span>
+          <span class="close-icon">✕</span>
+        </div>
+        <div class="dropdown-content">
+          <a href="#about-me">About</a>
+          <a href="#technical-skills">Technical Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="https://medium.com/@iamarunbrahma">Blog</a>
+          <a href="mailto:mithubrahma94@gmail.com">Hire Me</a>
+          <div class="theme-toggle">
+            <i class="fas fa-sun theme-icon" id="theme-toggle-icon"></i>
+          </div>
+        </div>
       </div>
     </div>
     <div class="wrapper">
@@ -42,11 +54,7 @@
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
         {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
-
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+        <p class="view"><a href="{{ site.github.repository_url }}">View this project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
         {% endif %}
 
       </header>
@@ -58,15 +66,24 @@
       <footer class="footer">
         <div class="footer-content">
           {% if site.github.is_project_page %}
-          <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+          <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>. &copy; <span id="current-year"></span> <i>Arun Brahma</i>. All rights reserved.</p>
           {% endif %}
-          <p>&copy; <span id="current-year"></span> Arun Brahma. All rights reserved.</p>
         </div>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     <script>
       document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navbar = document.querySelector('.navbar');
+        
+        hamburgerMenu.addEventListener('click', function() {
+          navbar.classList.toggle('menu-open');
+        });
+      });
     </script>
   </body>
 </html>
