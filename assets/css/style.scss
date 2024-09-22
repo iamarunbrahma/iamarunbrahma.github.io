@@ -97,6 +97,7 @@ section {
   width: calc(100% - 350px);
   margin-top: 60px; /* Adjusted to account for the navbar height */
   margin-bottom: 60px; /* Adjusted to account for the footer height */
+  scroll-margin-top: 60px; /* Ensure headers are visible below the navbar */
 }
 
 .logo-container {
@@ -251,6 +252,8 @@ nav {
   --navbar-background: #333;
   --footer-background: #222;
   --header-color: #ffffff; /* White headers */
+  --sidebar-background: #1e1e1e; /* Dark background for sidebar */
+  --main-content-background: #1e1e1e; /* Dark background for main content */
 }
 
 body {
@@ -262,12 +265,12 @@ h1, h2, h3 {
   color: var(--header-color); /* Apply header color */
 }
 
-.navbar {
-  background-color: var(--navbar-background);
+header, section {
+  background-color: var(--sidebar-background); /* Apply dark background to sidebar and main content */
 }
 
-.footer {
-  background-color: var(--footer-background);
+strong, em, b, i {
+  color: var(--text-color); /* Ensure bold, italics, and other markdown elements are white */
 }
 
 a {
@@ -276,4 +279,23 @@ a {
     color: var(--link-hover-color);
     text-decoration: none;
   }
+}
+
+.theme-icon {
+  cursor: pointer;
+  font-size: 1.5em;
+  margin-left: 20px;
+  border: 2px solid;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.theme-icon.fa-sun {
+  color: yellow;
+  border-color: yellow;
+}
+
+.theme-icon.fa-moon {
+  color: white;
+  border-color: white;
 }

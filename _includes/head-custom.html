@@ -13,25 +13,43 @@
     const themeSwitcher = document.createElement('div');
     themeSwitcher.style.float = 'right';
     themeSwitcher.innerHTML = `
-      <label for="theme-toggle">Light/Dark Theme:</label>
-      <input type="checkbox" id="theme-toggle">
+      <i id="theme-icon" class="fas fa-sun"></i>
     `;
     document.querySelector('.nav').appendChild(themeSwitcher);
+    const themeIcon = document.getElementById('theme-icon');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    if (currentTheme === 'dark') {
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+    }
 
-    const toggle = document.getElementById('theme-toggle');
-    toggle.addEventListener('change', function() {
-      if (this.checked) {
+    themeIcon.addEventListener('click', function() {
+      if (document.documentElement.getAttribute('data-theme') === 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'dark');
       } else {
         document.documentElement.setAttribute('data-theme', 'light');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'light');
       }
     });
 
-    // Smooth scrolling
+    // Smooth scrolling with offset
     document.querySelectorAll('.nav a').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const offset = document.querySelector('.navbar').offsetHeight;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollBy({
+          top: offsetPosition,
           behavior: 'smooth'
         });
       });
