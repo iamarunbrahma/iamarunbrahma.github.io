@@ -29,7 +29,7 @@ a {
 }
 
 header {
-  width: 270px;
+  width: 350px; /* Increased from 270px to 350px */
   position: fixed;
   top: 0;
   left: 0;
@@ -42,10 +42,10 @@ header {
 }
 
 section {
-  margin-left: 270px;
+  margin-left: 350px; /* Adjusted to match the new sidebar width */
   padding: 20px;
   box-sizing: border-box;
-  width: calc(100% - 270px);
+  width: calc(100% - 350px);
 }
 
 .logo-container {
@@ -113,4 +113,29 @@ section {
   .logo-img {
     max-width: 120px;
   }
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+.nav {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #023e8a;
 }
