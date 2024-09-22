@@ -10,9 +10,9 @@ body {
 }
 
 .navbar {
-  background-color: #fff;
+  background-color: var(--navbar-background); /* Use variable for background color */
   border-bottom: 1px solid #e1e4e8;
-  padding: 5px 20px; /* Reduced padding */
+  padding: 10px 20px; /* Adjust padding */
   position: fixed;
   top: 0;
   width: 100%;
@@ -28,17 +28,13 @@ body {
   align-items: center; /* Center items vertically */
 }
 
-.navbar nav {
-  flex-grow: 1;
-  text-align: center;
-}
-
 .navbar .nav {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
+  align-items: center; /* Center items vertically */
   gap: 20px;
 }
 
@@ -48,8 +44,9 @@ body {
 
 .navbar .nav a {
   text-decoration: none;
-  color: #0077b6;
+  color: var(--link-color);
   font-weight: bold;
+  font-size: 1.2em; /* Increase font size */
   padding: 10px 15px;
   border-radius: 5px;
 }
@@ -252,7 +249,7 @@ nav {
   --text-color: #e0e0e0;
   --link-color: #bb86fc; /* Ensure link color remains unchanged */
   --link-hover-color: #3700b3;
-  --navbar-background: #333;
+  --navbar-background: #333; /* Dark background for navbar */
   --footer-background: #222;
   --header-color: #ffffff; /* White headers */
   --sidebar-background: #1e1e1e; /* Dark background for sidebar */
@@ -286,7 +283,7 @@ a {
 
 .theme-icon {
   cursor: pointer;
-  font-size: 1.8em; /* Increase the size */
+  font-size: 2em; /* Increase the size */
   margin-left: 20px;
   border: 2px solid;
   border-radius: 50%;
