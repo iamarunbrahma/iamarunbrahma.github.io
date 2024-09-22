@@ -11,13 +11,7 @@
 <!-- Theme switcher -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const themeSwitcher = document.createElement('div');
-    themeSwitcher.style.float = 'right';
-    themeSwitcher.innerHTML = `
-      <i id="theme-icon" class="fas fa-sun"></i>
-    `;
-    document.querySelector('.nav').appendChild(themeSwitcher);
-    const themeIcon = document.getElementById('theme-icon');
+    const themeIcon = document.getElementById('theme-toggle-icon');
     const currentTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', currentTheme);
     if (currentTheme === 'dark') {
