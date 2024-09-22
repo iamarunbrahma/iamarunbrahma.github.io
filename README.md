@@ -35,6 +35,6 @@ Check out my services here: [Online Consultation](https://topmate.io/arun_brahma
 
 ## Connect with me:
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:mithubrahma94@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-black?style=flat-square&logo=Github&logoColor=white)](https://github.com/iamarunbrahma)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/iamarunbrahma)
-[![Medium](https://img.shields.io/badge/Medium-grey?style=flat-square&logo=medium&logoColor=white)](https://medium.com/@iamarunbrahma)
+[![GitHub](https://img.shields.io/badge/GitHub-black?style=flat-square&logo=Github&logoColor=white)](https://github.com/iamarunbrahma){:target="_blank" rel="noopener noreferrer"}
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/iamarunbrahma){:target="_blank" rel="noopener noreferrer"}
+[![Medium](https://img.shields.io/badge/Medium-grey?style=flat-square&logo=medium&logoColor=white)](https://medium.com/@iamarunbrahma){:target="_blank" rel="noopener noreferrer"}
