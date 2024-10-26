@@ -24,7 +24,6 @@ const MainContent = () => {
           content[section] = await response.text();
         }
         setContent(content);
-        console.log('Fetched content:', content);
       } catch (error) {
         console.error('Error loading content:', error);
       }
@@ -34,22 +33,35 @@ const MainContent = () => {
   }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section[id]');
+      let closestSection = 'about';
+      let minDistance = Infinity;
 
-    const sections = document.querySelectorAll('section[id]');
-    sections.forEach((section) => observer.observe(section));
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const distance = Math.abs(rect.top);
+        
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestSection = section.id;
+        }
+      });
+
+      setActiveSection(closestSection);
+    };
+
+    // Check URL hash on mount
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      setActiveSection(hash);
+    }
+
+    // Add scroll listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
-      sections.forEach((section) => observer.unobserve(section));
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -114,6 +126,14 @@ const MainContent = () => {
 };
 
 const App = () => {
+  useEffect(() => {
+    const redirect = sessionStorage.getItem('redirect_path');
+    if (redirect) {
+      sessionStorage.removeItem('redirect_path');
+      window.history.replaceState(null, '', redirect);
+    }
+  }, []);
+
   return (
     <HelmetProvider>
       <Router>
