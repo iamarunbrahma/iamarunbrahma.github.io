@@ -127,10 +127,17 @@ const MainContent = () => {
 
 const App = () => {
   useEffect(() => {
-    const redirect = sessionStorage.getItem('redirect_path');
+    // Get the redirect parameter from URL
+    const params = new URLSearchParams(window.location.search);
+    const redirect = params.get('redirect');
+    
     if (redirect) {
-      sessionStorage.removeItem('redirect_path');
-      window.history.replaceState(null, '', redirect);
+      // Remove the redirect parameter from URL
+      params.delete('redirect');
+      const newUrl = redirect + (params.toString() ? '?' + params.toString() : '');
+      
+      // Replace the current URL with the original path
+      window.history.replaceState(null, '', newUrl);
     }
   }, []);
 

@@ -2,14 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Redirecting...</title>
+    <title>Page Not Found</title>
     <script>
-        sessionStorage.setItem('redirect_path', window.location.pathname);
-        window.location.href = '/';
+        // Store the path and query string
+        const segment = window.location.pathname + window.location.search;
+        // Redirect to the root with a special parameter
+        window.location.href = '/?redirect=' + encodeURIComponent(segment);
     </script>
 </head>
 <body>
     Redirecting...
 </body>
 </html>
-
