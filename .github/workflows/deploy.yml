@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write     # Gives write access to gh-pages branch
+  pages: write       # Needed for GitHub Pages deployments
+  id-token: write    # Needed for GitHub Pages deployments
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
