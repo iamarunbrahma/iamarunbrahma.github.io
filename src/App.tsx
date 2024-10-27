@@ -108,16 +108,24 @@ const MainContent = () => {
 };
 
 const App = () => {
+  const [is404, setIs404] = useState(false);
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const isNotFound = params.get('notfound') === 'true';
     const redirect = params.get('redirect');
     
     if (isNotFound && redirect) {
+      setIs404(true);
       // Clean up the URL and navigate to the original path
       window.history.replaceState(null, '', redirect);
     }
   }, []);
+
+  if (is404) {
+    setIs404(false);
+    return <NotFound />;
+  }
 
   return (
     <HelmetProvider>
