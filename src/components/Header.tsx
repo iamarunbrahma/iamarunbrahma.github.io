@@ -57,7 +57,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleTheme, activeSection })
             </a>
             <a
               href={`mailto:${config.socialLinks.email}`}
-              className="nav-link bg-blue-600 text-white hover:bg-blue-900 hover:text-white px-4 py-2 rounded-full transition-colors duration-200 text-center lg:w-auto w-fit dark:hover:text-white dark:text-white"
+              className="nav-link bg-blue-600 text-white hover:bg-blue-900 hover:text-white px-4 py-2 rounded-full transition-colors duration-200 text-center w-fit self-start dark:hover:text-white dark:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               Hire Me!
@@ -112,7 +112,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleTheme, activeSection })
               </a>
               <a
                 href={`mailto:${config.socialLinks.email}`}
-                className="nav-link bg-blue-600 text-white hover:bg-blue-900 hover:text-white px-4 py-2 rounded-full transition-colors duration-200 text-center lg:w-auto w-fit dark:hover:text-white dark:text-white"
+                className="nav-link bg-blue-600 text-white hover:bg-blue-900 hover:text-white px-4 py-2 rounded-full transition-colors duration-200 text-center w-fit self-start dark:hover:text-white dark:text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Hire Me!

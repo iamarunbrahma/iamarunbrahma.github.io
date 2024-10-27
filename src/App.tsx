@@ -126,6 +126,7 @@ const App = () => {
 
   if (showNotFound) {
     setShowNotFound(false);
+    console.log('Showing NotFound');
     return <NotFound />;
   }
 
