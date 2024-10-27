@@ -14,8 +14,6 @@ const RedirectHandler = () => {
       window.history.replaceState(null, '', redirect);
       // Force React Router to handle the new path
       navigate(redirect, { replace: true });
-      console.log('Redirected to:', window.location.href);
-      console.log('Redirect:', redirect);
     }
   }, [navigate]);
 

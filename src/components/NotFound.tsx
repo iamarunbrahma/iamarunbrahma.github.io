@@ -12,8 +12,6 @@ const NotFound = () => {
     return () => clearTimeout(timer);
   }, [navigate]);
 
-  console.log('Hello from NotFound');
-
   return (
     <div className="bg-gray-100 dark:bg-gray-900 min-h-screen flex items-center justify-center">
       <div className="text-center p-8">
