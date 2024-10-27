@@ -126,9 +126,11 @@ const MainContent = () => {
 };
 
 const App = () => {
+  const location = window.location;
+  
   useEffect(() => {
     // Get the redirect parameter from URL
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(location.search);
     const redirect = params.get('redirect');
     
     if (redirect) {
@@ -146,7 +148,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<MainContent />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </Router>
     </HelmetProvider>

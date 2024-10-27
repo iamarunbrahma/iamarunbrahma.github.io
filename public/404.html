@@ -4,10 +4,16 @@
     <meta charset="utf-8">
     <title>Page Not Found</title>
     <script>
-        // Store the path and query string
-        const segment = window.location.pathname + window.location.search;
-        // Redirect to the root with a special parameter
-        window.location.href = '/?redirect=' + encodeURIComponent(segment);
+        // Store the path, query string, and hash
+        const path = window.location.pathname;
+        const query = window.location.search;
+        const hash = window.location.hash;
+        
+        // Only redirect to home if it's not a hash route
+        if (!path.includes('#')) {
+            // Redirect to the root with a special parameter
+            window.location.href = '/?redirect=' + encodeURIComponent(path + query + hash);
+        }
     </script>
 </head>
 <body>
