@@ -116,26 +116,25 @@ const App = () => {
     const redirect = params.get('redirect');
     
     if (isNotFound && redirect) {
-      setShowNotFound(true);
-      // Clean up the URL and navigate to the original path
       window.history.replaceState(null, '', redirect);
+      setShowNotFound(true);
       console.log('Redirected to:', window.location.href);
       console.log('Redirect:', redirect);
     }
   }, []);
 
-  if (showNotFound) {
-    setShowNotFound(false);
-    console.log('Showing NotFound');
-    return <NotFound />;
-  }
-
   return (
     <HelmetProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<MainContent />} />
-          <Route path="*" element={<NotFound />} />
+          {showNotFound ? (
+            <Route path="*" element={<NotFound />} />
+          ) : (
+            <>
+              <Route path="/" element={<MainContent />} />
+              <Route path="*" element={<NotFound />} />
+            </>
+          )}
         </Routes>
       </Router>
     </HelmetProvider>

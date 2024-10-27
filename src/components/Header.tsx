@@ -89,7 +89,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleTheme, activeSection })
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col items-start space-y-4">
               {navItems.map((section) => (
                 <a
                   key={section}
@@ -112,7 +112,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleTheme, activeSection })
               </a>
               <a
                 href={`mailto:${config.socialLinks.email}`}
-                className="nav-link bg-blue-600 text-white hover:bg-blue-900 hover:text-white px-4 py-2 rounded-full transition-colors duration-200 text-center w-fit self-start dark:hover:text-white dark:text-white"
+                className="nav-link bg-blue-600 text-white hover:bg-blue-900 hover:text-white px-4 py-2 rounded-full transition-colors duration-200 text-center w-fit dark:hover:text-white dark:text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Hire Me!
