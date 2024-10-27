@@ -2,12 +2,13 @@
 import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SEO from './components/SEO';
 import Header from './components/Header';
 import ContentSection from './components/ContentSection';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
+import RedirectHandler from './components/RedirectHandler';
 import { content } from './utils/content';
 
 const MainContent = () => {
@@ -108,41 +109,17 @@ const MainContent = () => {
 };
 
 const App = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const isNotFound = params.get('notfound') === 'true';
-    const redirect = params.get('redirect');
-    
-    if (isNotFound && redirect) {
-      // Clean up URL parameters
-      window.history.replaceState(null, '', redirect);
-      // Force React Router to handle the new path
-      navigate(redirect, { replace: true });
-      console.log('Redirected to:', window.location.href);
-      console.log('Redirect:', redirect);
-    }
-  }, [navigate]);
-
-  return (
-    <HelmetProvider>
-      <Routes>
-        <Route path="/" element={<MainContent />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </HelmetProvider>
-  );
-};
-
-// Wrap the App with Router
-const AppWrapper = () => {
   return (
     <Router>
-      <App />
+      <HelmetProvider>
+        <RedirectHandler />
+        <Routes>
+          <Route path="/" element={<MainContent />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </HelmetProvider>
     </Router>
   );
 };
 
-export default AppWrapper;
-
+export default App;
