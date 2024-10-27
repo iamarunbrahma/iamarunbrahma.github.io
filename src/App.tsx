@@ -108,20 +108,14 @@ const MainContent = () => {
 };
 
 const App = () => {
-  const location = window.location;
-  
   useEffect(() => {
-    // Get the redirect parameter from URL
-    const params = new URLSearchParams(location.search);
+    const params = new URLSearchParams(window.location.search);
+    const isNotFound = params.get('notfound') === 'true';
     const redirect = params.get('redirect');
     
-    if (redirect) {
-      // Remove the redirect parameter from URL
-      params.delete('redirect');
-      const newUrl = redirect + (params.toString() ? '?' + params.toString() : '');
-      
-      // Replace the current URL with the original path
-      window.history.replaceState(null, '', newUrl);
+    if (isNotFound && redirect) {
+      // Clean up the URL and navigate to the original path
+      window.history.replaceState(null, '', redirect);
     }
   }, []);
 
@@ -130,7 +124,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<MainContent />} />
-          <Route path="/*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </HelmetProvider>

@@ -4,16 +4,13 @@
     <meta charset="utf-8">
     <title>Page Not Found</title>
     <script>
-        // Store the path, query string, and hash
+        // Store the path and indicate this is a 404 error
         const path = window.location.pathname;
         const query = window.location.search;
         const hash = window.location.hash;
         
-        // Only redirect to home if it's not a hash route
-        if (!path.includes('#')) {
-            // Redirect to the root with a special parameter
-            window.location.href = '/?redirect=' + encodeURIComponent(path + query + hash);
-        }
+        // Redirect with both the path and a 404 indicator
+        window.location.href = '/?notfound=true&redirect=' + encodeURIComponent(path + query + hash);
     </script>
 </head>
 <body>
