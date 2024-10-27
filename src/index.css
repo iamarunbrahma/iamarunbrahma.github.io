@@ -67,12 +67,6 @@
   }
 }
 
-/* Responsive navigation */
-@media (max-width: 768px) {
-  .nav-link {
-    @apply block w-full py-2 px-4;
-  }
-}
 
 /* Transition for mobile menu */
 .mobile-menu-enter {
