@@ -108,7 +108,7 @@ const MainContent = () => {
 };
 
 const App = () => {
-  const [is404, setIs404] = useState(false);
+  const [showNotFound, setShowNotFound] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -116,14 +116,16 @@ const App = () => {
     const redirect = params.get('redirect');
     
     if (isNotFound && redirect) {
-      setIs404(true);
+      setShowNotFound(true);
       // Clean up the URL and navigate to the original path
       window.history.replaceState(null, '', redirect);
+      console.log('Redirected to:', window.location.href);
+      console.log('Redirect:', redirect);
     }
   }, []);
 
-  if (is404) {
-    setIs404(false);
+  if (showNotFound) {
+    setShowNotFound(false);
     return <NotFound />;
   }
 
