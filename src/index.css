@@ -4,42 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom base styles */
+/* Essential custom styles */
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem; /* Adjust this value based on your header height */
-  }
-
-  body {
-    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
-  }
-
-  /* Custom heading styles */
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
-  }
-}
-
-/* Custom components */
-@layer components {
-  .nav-link {
-    @apply px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200;
-  }
-
-  .section-container {
-    @apply max-w-4xl mx-auto px-4 py-16;
-  }
-
-  .social-icon {
-    @apply text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200;
-  }
-}
-
-/* Custom utilities */
-@layer utilities {
-  .prose-custom {
-    @apply prose dark:prose-invert max-w-none prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg;
+    scroll-padding-top: 5rem;
   }
 }
 
@@ -60,15 +29,7 @@
   @apply bg-gray-400 dark:bg-gray-500;
 }
 
-/* Apply font family */
-@layer base {
-  html {
-    font-family: 'Inter', system-ui, sans-serif;
-  }
-}
-
-
-/* Transition for mobile menu */
+/* Mobile menu transitions */
 .mobile-menu-enter {
   opacity: 0;
   transform: scale(0.9);

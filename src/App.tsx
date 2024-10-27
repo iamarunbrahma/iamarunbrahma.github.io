@@ -108,8 +108,6 @@ const MainContent = () => {
 };
 
 const App = () => {
-  const [showNotFound, setShowNotFound] = useState(false);
-
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const isNotFound = params.get('notfound') === 'true';
@@ -117,7 +115,6 @@ const App = () => {
     
     if (isNotFound && redirect) {
       window.history.replaceState(null, '', redirect);
-      setShowNotFound(true);
       console.log('Redirected to:', window.location.href);
       console.log('Redirect:', redirect);
     }
@@ -127,13 +124,8 @@ const App = () => {
     <HelmetProvider>
       <Router>
         <Routes>
-          {showNotFound ? (
-            <Route path="*" element={<NotFound />} />
-          ) : (
-            <>
-              <Route path="/" element={<MainContent />} />
-            </>
-          )}
+          <Route path="/" element={<MainContent />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </HelmetProvider>
