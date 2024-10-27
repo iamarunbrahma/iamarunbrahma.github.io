@@ -8,29 +8,11 @@ import Header from './components/Header';
 import ContentSection from './components/ContentSection';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
+import { content } from './utils/content';
 
 const MainContent = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
-  const [content, setContent] = useState<{ [key: string]: string }>({});
-
-  useEffect(() => {
-    const fetchContent = async () => {
-      try {
-        const sections = ['about', 'projects', 'experience'];
-        const content: { [key: string]: string } = {};
-        for (const section of sections) {
-          const response = await fetch(`./content/${section}.md`);
-          content[section] = await response.text();
-        }
-        setContent(content);
-      } catch (error) {
-        console.error('Error loading content:', error);
-      }
-    };
-
-    fetchContent();
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {

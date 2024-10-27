@@ -1,4 +1,5 @@
 import { Linkedin, Github, Mail } from 'lucide-react';
+import { config } from '../utils/config';
 
 const Footer: React.FC = () => {
   return (
@@ -6,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 py-8">
         <div className="flex justify-center space-x-6 mb-4">
           <a
-            href="https://linkedin.com/in/johndoe"
+            href={config.socialLinks.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-400 hover:text-blue-600"
@@ -14,7 +15,7 @@ const Footer: React.FC = () => {
             <Linkedin size={24} />
           </a>
           <a
-            href="https://github.com/johndoe"
+            href={config.socialLinks.github}
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
@@ -22,7 +23,7 @@ const Footer: React.FC = () => {
             <Github size={24} />
           </a>
           <a
-            href="mailto:john@example.com"
+            href={`mailto:${config.socialLinks.email}`}
             className="text-gray-600 dark:text-gray-400 hover:text-red-600"
           >
             <Mail size={24} />

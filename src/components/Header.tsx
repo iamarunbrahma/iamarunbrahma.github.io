@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Sun, Moon, ExternalLink, Menu, X } from 'lucide-react';
+import { config } from '../utils/config';
 
 interface HeaderProps {
   darkMode: boolean;
@@ -45,17 +46,19 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleTheme, activeSection })
               </a>
             ))}
             <a
-              href="https://blog.example.com"
+              href={config.externalLinks.blog}
               target="_blank"
               rel="noopener noreferrer"
               className="nav-link flex items-center"
+              onClick={() => setIsMenuOpen(false)}
             >
               Blog
               <ExternalLink size={16} className="ml-1" />
             </a>
             <a
-              href="mailto:john@example.com"
-              className="nav-link bg-blue-600 text-white hover:bg-blue-900 hover:text-white px-4 py-2 rounded-full transition-colors duration-200 dark:hover:text-white dark:text-white"
+              href={`mailto:${config.socialLinks.email}`}
+              className="nav-link bg-blue-600 text-white hover:bg-blue-900 hover:text-white px-4 py-2 rounded-full transition-colors duration-200 text-center lg:w-auto w-fit dark:hover:text-white dark:text-white"
+              onClick={() => setIsMenuOpen(false)}
             >
               Hire Me!
             </a>
@@ -98,7 +101,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleTheme, activeSection })
                 </a>
               ))}
               <a
-                href="https://blog.example.com"
+                href={config.externalLinks.blog}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nav-link flex items-center"
@@ -108,7 +111,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleTheme, activeSection })
                 <ExternalLink size={16} className="ml-1" />
               </a>
               <a
-                href="mailto:john@example.com"
+                href={`mailto:${config.socialLinks.email}`}
                 className="nav-link bg-blue-600 text-white hover:bg-blue-900 hover:text-white px-4 py-2 rounded-full transition-colors duration-200 text-center lg:w-auto w-fit dark:hover:text-white dark:text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
