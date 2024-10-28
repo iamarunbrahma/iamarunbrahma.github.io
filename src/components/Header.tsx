@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleTheme, activeSection })
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <img
-              src="/assets/arun_brahma.png"
+              src="/assets/arun.svg"
               alt="Arun Brahma"
               className="w-12 h-12 rounded-full object-cover"
             />
