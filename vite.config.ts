@@ -8,6 +8,7 @@ export default defineConfig({
     createSitemapPlugin({
       hostname: 'https://arunbrahma.com',
       dynamicRoutes: [],
+      exclude: ['/404'],
       robots: [
         {
           userAgent: '*',
