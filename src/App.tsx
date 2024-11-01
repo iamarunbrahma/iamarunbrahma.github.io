@@ -98,8 +98,8 @@ const MainContent = () => {
             </div>
           </section>
 
-          <ContentSection id="projects" title="Projects" content={content.projects} />
-          <ContentSection id="experience" title="Experience" content={content.experience} />
+          <ContentSection id="projects" title="Personal Projects" content={content.projects} />
+          <ContentSection id="experience" title="Independent Consulting" content={content.experience} />
         </main>
 
         <Footer />
