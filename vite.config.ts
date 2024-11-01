@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     createSitemapPlugin({
       hostname: 'https://arunbrahma.com',
-      dynamicRoutes: ['/'],
+      dynamicRoutes: [],
       robots: [
         {
           userAgent: '*',
