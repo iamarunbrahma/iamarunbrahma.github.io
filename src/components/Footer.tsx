@@ -11,6 +11,7 @@ const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-400 hover:text-blue-600"
+            aria-label="Visit my LinkedIn"
           >
             <Linkedin size={24} />
           </a>
@@ -19,12 +20,14 @@ const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+            aria-label="Check out my GitHub"
           >
             <Github size={24} />
           </a>
           <a
             href={`mailto:${config.socialLinks.email}`}
             className="text-gray-600 dark:text-gray-400 hover:text-red-600"
+            aria-label="Send me an email"
           >
             <Mail size={24} />
           </a>

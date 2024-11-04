@@ -90,7 +90,7 @@ const MainContent = () => {
               </div>
               <div className="md:float-right md:ml-8 mb-6 md:mb-0 flex-shrink-0">
                 <img
-                  src="/assets/arun_brahma.png"
+                  src="/assets/arun_brahma.webp"
                   alt="Arun Brahma"
                   className="w-64 md:w-96 h-auto rounded-2xl object-cover shadow-2xl transition-transform duration-300 hover:scale-105"
                 />
