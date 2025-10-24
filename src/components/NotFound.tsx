@@ -1,48 +1,41 @@
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { ArrowLeft, Sparkles } from 'lucide-react';
 
-const NotFound = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate('/');
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, [navigate]);
-
+export function NotFound() {
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 min-h-screen flex items-center justify-center">
-      <div className="text-center p-8">
-        <img 
-          src="/assets/404.svg" 
-          alt="404 Error" 
-          className="w-48 h-48 mx-auto mb-8 animate-bounce"
-        />
-        <h1 className="text-6xl font-bold text-gray-800 dark:text-gray-200 mb-4">404</h1>
-        <p className="text-2xl text-gray-600 dark:text-gray-400 mb-8">Oops! Page not found</p>
-        <p className="text-xl text-gray-500 dark:text-gray-300 mb-8">
-          Looks like this page took a vacation without telling us. How rude!
-        </p>
-        <p className="text-lg text-gray-400 dark:text-gray-500 mb-8">
-          Don't worry, we're sending our best detective (a very confused intern) to find it.
-        </p>
-        <p className="text-md text-gray-400 dark:text-gray-500 mb-4">
-          In the meantime, we'll be redirecting you to our home page in 5 seconds.
-        </p>
-        <p className="text-md text-gray-400 dark:text-gray-500">
-          If you're impatient (we don't judge), click the button below:
-        </p>
-        <button
-          onClick={() => navigate('/')}
-          className="inline-block mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
-        >
-          Take Me Home
-        </button>
-      </div>
-    </div>
-  );
-};
+    <section className="container-page -mt-4">
+      <div className="min-h-[60vh] flex flex-col items-center justify-center text-center gap-6">
+        <div className="flex items-center gap-4">
+          <span className="text-6xl sm:text-7xl font-extrabold tracking-tight">404</span>
+          <span className="h-8 sm:h-10 w-px bg-neutral-300 dark:bg-neutral-700" />
+          <p className="text-neutral-600 dark:text-neutral-400 text-base sm:text-lg">
+            This page took a coffee break. It never came back.
+          </p>
+        </div>
 
-export default NotFound;
+        <p className="text-sm sm:text-base text-neutral-500 dark:text-neutral-400 max-w-prose">
+          You unearthed a wormhole in the site map. Try the homepage — it
+          actually exists. If you think this is a bug, do tell me.
+        </p>
+
+        <div className="flex items-center gap-3">
+          <a
+            href="/"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--link)] text-white hover:opacity-90 transition"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Take me home
+          </a>
+          <a
+            href="mailto:contact@arunbrahma.com?subject=Link%20not%20working%20on%20arunbrahma.com"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-black/10 dark:border-white/20 text-neutral-800 dark:text-neutral-200 hover:bg-black/5 dark:hover:bg-white/10 transition"
+          >
+            <Sparkles className="h-4 w-4" />
+            Report this
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+

@@ -1,36 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import createSitemapPlugin from 'vite-plugin-sitemap'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+import mdx from '@mdx-js/rollup';
+import tailwindcss from '@tailwindcss/vite';
 
+// Vite configuration for React using SWC for fast TS/JSX transforms
 export default defineConfig({
-  plugins: [
-    react(),
-    createSitemapPlugin({
-      hostname: 'https://arunbrahma.com',
-      dynamicRoutes: [],
-      exclude: ['/404'],
-      robots: [
-        {
-          userAgent: '*',
-          allow: '/',
-        },
-      ],
-      outDir: 'dist',
-      lastmod: new Date(),
-      changefreq: 'weekly',
-      priority: 1.0
-    }),
-  ],
-  base: '/',
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      },
-    },
-  },
-  publicDir: 'public',
-  assetsInclude: ['**/*.md'],
-})
+  plugins: [mdx(), react(), tailwindcss()],
+});
