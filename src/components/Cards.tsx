@@ -5,7 +5,6 @@ export function AboutCard({ children }: { children: ReactNode }) {
   return (
     <div
       className={[
-        'mdx-typography',
         // Layout and readable copy defaults
         'max-w-2xl text-sm leading-6 [text-wrap:pretty] text-black dark:text-neutral-300',
         // Vertical rhythm for direct children paragraphs and lists
