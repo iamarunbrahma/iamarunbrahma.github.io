@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "bunx --bun vite",
     "build": "bunx --bun vite build",
+    "postbuild": "cp dist/index.html dist/404.html",
     "preview": "bunx --bun vite preview",
     "lint": "bunx --bun eslint .",
     "lint:fix": "bunx --bun eslint . --fix",
