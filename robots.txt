@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_*
+Disallow: /assets/*.map
+Crawl-delay: 1
+
+Sitemap: https://arunbrahma.com/sitemap.xml
