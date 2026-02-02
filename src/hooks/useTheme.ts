@@ -3,7 +3,7 @@ import { useCallback, useEffect, useSyncExternalStore } from 'react';
 type Theme = 'light' | 'dark';
 const STORAGE_KEY = 'theme';
 
-const listeners = new Set<() => void>(); // Keep all subscribers aligned with the latest theme.
+const listeners = new Set<() => void>();
 
 const readStoredTheme = (): Theme | null => {
   if (typeof window === 'undefined') return null;

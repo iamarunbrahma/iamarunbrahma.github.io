@@ -3,12 +3,11 @@
 @layer base {
   :root {
     color-scheme: light dark;
-    /* Canonical hyperlink colors */
-    --link: #2563eb; /* Tailwind blue-600 */
-    --link-hover: #1d4ed8; /* Tailwind blue-700 */
-    /* High-contrast foreground for elements that should always be readable */
+    --link: #2563eb;
+    --link-hover: #1d4ed8;
     --fg-contrast: #000000;
-    /* Surface gradient + ring for light theme */
+    --text-primary: #000000;
+    --text-secondary: #525252;
     --surface-bg-1: rgba(255, 255, 255, 0.8);
     --surface-bg-2: rgba(255, 255, 255, 0.6);
     --ring-1: rgba(0, 0, 0, 0.08);
@@ -25,13 +24,12 @@
     height: 100%;
   }
   body {
-    /* Light: white bg, black text; Dark: deep navy bg, white text */
-    @apply bg-white text-black dark:text-white font-sans antialiased text-[14px] sm:text-[15px] leading-7;
+    @apply bg-white font-sans antialiased text-[14px] sm:text-[15px] leading-7;
     background-color: #ffffff;
+    color: var(--text-primary);
   }
 }
 
-/* Ensure explicit background colors for both themes */
 html:not(.dark) body {
   background-color: #ffffff;
   color: #000000;
@@ -41,11 +39,11 @@ html:not(.dark) body {
   color: #ffffff;
 }
 .dark {
-  /* Softer link color for dark mode */
-  --link: #93c5fd; /* blue-300 */
-  --link-hover: #bfdbfe; /* blue-200 */
+  --link: #93c5fd;
+  --link-hover: #bfdbfe;
   --fg-contrast: #ffffff;
-  /* Surface gradient + ring for dark theme */
+  --text-primary: #ffffff;
+  --text-secondary: #d4d4d4;
   --surface-bg-1: rgba(255, 255, 255, 0.12);
   --surface-bg-2: rgba(255, 255, 255, 0.06);
   --ring-1: rgba(255, 255, 255, 0.14);
@@ -53,7 +51,6 @@ html:not(.dark) body {
   --card-shadow: 0 2px 2px rgba(0, 0, 0, 0.35), 0 18px 42px rgba(0, 0, 0, 0.45);
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -72,13 +69,26 @@ html:not(.dark) body {
 }
 
 .section-title {
-  /* Style like h3 */
   @apply text-xl sm:text-[20px] md:text-[22px] font-semibold tracking-tight mb-4;
 }
 
 .card {
-  /* Soft gradient surface with gradient ring (no solid border) */
-  @apply rounded-2xl backdrop-blur-md;
+  @apply rounded-2xl;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(to bottom right, var(--surface-bg-1), var(--surface-bg-2)) padding-box,
+    linear-gradient(to bottom right, var(--ring-1), var(--ring-2)) border-box;
+  box-shadow: var(--card-shadow);
+  contain: layout style;
+}
+
+@media (min-width: 768px) {
+  .card {
+    backdrop-filter: blur(12px);
+  }
+}
+
+.soft-surface {
   border: 1px solid transparent;
   background:
     linear-gradient(to bottom right, var(--surface-bg-1), var(--surface-bg-2)) padding-box,
@@ -86,14 +96,10 @@ html:not(.dark) body {
   box-shadow: var(--card-shadow);
 }
 
-/* General utility for small surfaces like logo blocks, badges, etc. */
-.soft-surface {
-  @apply backdrop-blur-md;
-  border: 1px solid transparent;
-  background:
-    linear-gradient(to bottom right, var(--surface-bg-1), var(--surface-bg-2)) padding-box,
-    linear-gradient(to bottom right, var(--ring-1), var(--ring-2)) border-box;
-  box-shadow: var(--card-shadow);
+@media (min-width: 768px) {
+  .soft-surface {
+    backdrop-filter: blur(12px);
+  }
 }
 
 @layer base {
@@ -105,16 +111,13 @@ html:not(.dark) body {
   }
 }
 
-/* Ensure body copy inside cards is pure black in light mode while staying softer in dark mode */
-html:not(.dark) .card p,
-html:not(.dark) .card ul,
-html:not(.dark) .card li {
-  color: #000000;
+.card p,
+.card ul,
+.card li {
+  color: var(--text-primary);
 }
 
-/* Ensure MDX typography surfaces also render pure black body copy in light mode */
-html:not(.dark)
-  .mdx-typography
+.mdx-typography
   :where(
     h1,
     h2,
@@ -137,10 +140,110 @@ html:not(.dark)
     dd,
     dt
   ) {
-  color: #000000;
+  color: var(--text-primary);
 }
-/* Keep links and any nested content inside links blue in light mode */
-html:not(.dark) .mdx-typography a,
-html:not(.dark) .mdx-typography a * {
+
+.mdx-typography a,
+.mdx-typography a * {
   color: var(--link);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.35s ease-out forwards;
+  will-change: transform, opacity;
+  contain: layout;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+  will-change: opacity;
+  contain: layout;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.25s ease-out forwards;
+  will-change: transform, opacity;
+  contain: layout;
+}
+
+.animation-delay-100 { animation-delay: 50ms; }
+.animation-delay-200 { animation-delay: 100ms; }
+.animation-delay-300 { animation-delay: 150ms; }
+.animation-delay-400 { animation-delay: 200ms; }
+.animation-delay-500 { animation-delay: 250ms; }
+
+.card {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.dark .card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+
+.animate-fade-in-up,
+.animate-fade-in,
+.animate-scale-in {
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 767px) {
+  section:not(:first-of-type) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 300px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-fade-in,
+  .animate-scale-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+  }
+
+  .card {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
 }
