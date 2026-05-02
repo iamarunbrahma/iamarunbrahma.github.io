@@ -1,0 +1,249 @@
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+    --link: #2563eb;
+    --link-hover: #1d4ed8;
+    --fg-contrast: #000000;
+    --text-primary: #000000;
+    --text-secondary: #525252;
+    --surface-bg-1: rgba(255, 255, 255, 0.8);
+    --surface-bg-2: rgba(255, 255, 255, 0.6);
+    --ring-1: rgba(0, 0, 0, 0.08);
+    --ring-2: rgba(0, 0, 0, 0.02);
+    --card-shadow: 0 1px 1px rgba(0, 0, 0, 0.04), 0 12px 32px rgba(0, 0, 0, 0.08);
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-white font-sans antialiased text-[14px] sm:text-[15px] leading-7;
+    background-color: #ffffff;
+    color: var(--text-primary);
+  }
+}
+
+html:not(.dark) body {
+  background-color: #ffffff;
+  color: #000000;
+}
+.dark body {
+  background-color: #0b1220;
+  color: #ffffff;
+}
+.dark {
+  --link: #93c5fd;
+  --link-hover: #bfdbfe;
+  --fg-contrast: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondary: #d4d4d4;
+  --surface-bg-1: rgba(255, 255, 255, 0.12);
+  --surface-bg-2: rgba(255, 255, 255, 0.06);
+  --ring-1: rgba(255, 255, 255, 0.14);
+  --ring-2: rgba(255, 255, 255, 0.06);
+  --card-shadow: 0 2px 2px rgba(0, 0, 0, 0.35), 0 18px 42px rgba(0, 0, 0, 0.45);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100 dark:bg-neutral-800;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 dark:bg-neutral-600 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-400 dark:bg-neutral-500;
+}
+
+.container-page {
+  @apply max-w-6xl mx-auto px-4 sm:px-6;
+}
+
+.section-title {
+  @apply text-xl sm:text-[20px] md:text-[22px] font-semibold tracking-tight mb-4;
+}
+
+.card {
+  @apply rounded-2xl;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(to bottom right, var(--surface-bg-1), var(--surface-bg-2)) padding-box,
+    linear-gradient(to bottom right, var(--ring-1), var(--ring-2)) border-box;
+  box-shadow: var(--card-shadow);
+  contain: layout style;
+}
+
+@media (min-width: 768px) {
+  .card {
+    backdrop-filter: blur(12px);
+  }
+}
+
+.soft-surface {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(to bottom right, var(--surface-bg-1), var(--surface-bg-2)) padding-box,
+    linear-gradient(to bottom right, var(--ring-1), var(--ring-2)) border-box;
+  box-shadow: var(--card-shadow);
+}
+
+@media (min-width: 768px) {
+  .soft-surface {
+    backdrop-filter: blur(12px);
+  }
+}
+
+@layer base {
+  a {
+    color: var(--link);
+  }
+  a:hover {
+    color: var(--link-hover);
+  }
+}
+
+.card p,
+.card ul,
+.card li {
+  color: var(--text-primary);
+}
+
+.mdx-typography
+  :where(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    li,
+    strong,
+    b,
+    em,
+    i,
+    blockquote,
+    small,
+    mark,
+    figcaption,
+    dd,
+    dt
+  ) {
+  color: var(--text-primary);
+}
+
+.mdx-typography a,
+.mdx-typography a * {
+  color: var(--link);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.35s ease-out forwards;
+  will-change: transform, opacity;
+  contain: layout;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+  will-change: opacity;
+  contain: layout;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.25s ease-out forwards;
+  will-change: transform, opacity;
+  contain: layout;
+}
+
+.animation-delay-100 { animation-delay: 50ms; }
+.animation-delay-200 { animation-delay: 100ms; }
+.animation-delay-300 { animation-delay: 150ms; }
+.animation-delay-400 { animation-delay: 200ms; }
+.animation-delay-500 { animation-delay: 250ms; }
+
+.card {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.dark .card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+
+.animate-fade-in-up,
+.animate-fade-in,
+.animate-scale-in {
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 767px) {
+  section:not(:first-of-type) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 300px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-fade-in,
+  .animate-scale-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+  }
+
+  .card {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
