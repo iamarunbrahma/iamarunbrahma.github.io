@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arun Brahma | Machine Learning Engineer</title>
+    <meta
+      name="description"
+      content="Arun Brahma is a Senior Machine Learning Engineer at Walmart with expertise in Gen AI, LLM fine-tuning, RAG systems, and multi-agent architectures."
+    />
+    <meta name="keywords" content="Machine Learning Engineer, Gen AI, LLM, RAG, ML Consultant, Arun Brahma" />
+    <meta name="author" content="Arun Brahma" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Arun Brahma | Machine Learning Engineer" />
+    <meta
+      property="og:description"
+      content="Senior Machine Learning Engineer at Walmart with expertise in Gen AI, LLM fine-tuning, and multi-agent architectures."
+    />
+    <meta property="og:image" content="https://arunbrahma.com/assets/arun_brahma.png" />
+    <meta property="og:url" content="https://arunbrahma.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Arun Brahma" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Arun Brahma | Machine Learning Engineer" />
+    <meta name="twitter:description" content="Senior Machine Learning Engineer at Walmart with expertise in Gen AI, LLM fine-tuning, and multi-agent architectures." />
+    <meta name="twitter:image" content="https://arunbrahma.com/assets/arun_brahma.png" />
+
+    <link rel="canonical" href="https://arunbrahma.com/" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Premium serif webfont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"
+    />
+
+    <!-- JSON-LD Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Arun Brahma",
+      "alternateName": "arunbrahma.com",
+      "url": "https://arunbrahma.com/",
+      "description": "Personal website of Arun Brahma",
+      "author": {
+        "@type": "Person",
+        "@id": "https://arunbrahma.com/#person",
+        "name": "Arun Brahma"
+      },
+      "publisher": {
+        "@type": "Person",
+        "@id": "https://arunbrahma.com/#person",
+        "name": "Arun Brahma"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: ProfilePage with Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://arunbrahma.com/#person",
+        "name": "Arun Brahma",
+        "jobTitle": "Senior Machine Learning Engineer",
+        "image": "https://arunbrahma.com/assets/arun_brahma.png",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Walmart Global Tech"
+        },
+        "description": "Senior Machine Learning Engineer with expertise in Gen AI, LLM fine-tuning, RAG systems, and multi-agent architectures.",
+        "url": "https://arunbrahma.com/",
+        "email": "contact@arunbrahma.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/iamarunbrahma",
+          "https://github.com/iamarunbrahma",
+          "https://medium.com/@iamarunbrahma"
+        ],
+        "knowsAbout": [
+          "Machine Learning",
+          "Large Language Models",
+          "Retrieval Augmented Generation",
+          "Multi-Agent Systems",
+          "Natural Language Processing",
+          "Gen AI",
+          "Deep Learning",
+          "Python",
+          "PyTorch",
+          "Transformers"
+        ]
+      }
+    }
+    </script>
+
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #1f1d1b;
+        --muted: #6e6a64;
+        --rule: #e7e3dc;
+        --link: #14538d;
+        --link-hover: #0d3a64;
+      }
+
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Source Serif 4", Georgia, Cambria, "Times New Roman", Times, serif;
+        font-size: 19px;
+        line-height: 1.72;
+        font-feature-settings: "kern", "liga";
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      .wrap { max-width: 800px; margin: 0 auto; padding: 64px 24px 88px; }
+
+      a {
+        color: var(--link);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2.5px;
+        transition: color 0.15s ease;
+      }
+      a:hover { color: var(--link-hover); }
+
+      .header { display: flex; gap: 26px; align-items: center; }
+      .avatar {
+        width: 116px; height: 116px; border-radius: 8px;
+        object-fit: cover; flex-shrink: 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      h1 { font-size: 35px; font-weight: 600; line-height: 1.12; margin: 0 0 6px; letter-spacing: -0.012em; }
+      .role { color: var(--muted); font-style: italic; font-size: 18px; margin: 0 0 12px; }
+      .social { margin: 0; font-size: 16px; }
+
+      hr { border: none; border-top: 1px solid var(--rule); margin: 34px 0; }
+
+      h2 {
+        font-size: 15px; font-weight: 600; margin: 0 0 18px;
+        text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted);
+      }
+      p { margin: 0 0 16px; }
+
+      .interests { margin: 0 0 18px; }
+      .kicker {
+        display: block;
+        text-transform: uppercase; letter-spacing: 0.14em;
+        font-size: 13px; font-weight: 600; color: var(--muted);
+        margin-bottom: 3px;
+      }
+      section { margin-bottom: 6px; }
+
+      .item { margin-bottom: 26px; }
+      .item-head { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+      .logo {
+        width: 26px; height: 26px;
+        object-fit: contain; flex-shrink: 0;
+      }
+      .item-title { font-weight: 600; font-size: 19px; }
+      .item-links { margin-left: auto; font-size: 15px; }
+      .item-links a { margin-left: 16px; white-space: nowrap; }
+      ul { margin: 9px 0 0; padding-left: 22px; }
+      li { margin: 6px 0; }
+      .item > p { margin: 9px 0 0; }
+
+      footer {
+        margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--rule);
+        font-size: 15px; color: var(--muted);
+      }
+
+      @media (max-width: 480px) {
+        body { font-size: 18px; }
+        .wrap { padding: 44px 20px 64px; }
+        .header { flex-direction: column; text-align: center; }
+        .item-links { margin-left: 0; }
+        .item-links a:first-child { margin-left: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="header">
+        <img
+          class="avatar"
+          src="assets/arun_brahma.webp"
+          alt="Portrait of Arun Brahma"
+          width="116"
+          height="116"
+        />
+        <div>
+          <h1>Arun Brahma</h1>
+          <p class="role">Senior Machine Learning Engineer, Walmart Global Tech</p>
+          <p class="social">
+            <a href="mailto:contact@arunbrahma.com">Email</a> &middot;
+            <a href="https://www.linkedin.com/in/iamarunbrahma" target="_blank" rel="noreferrer noopener">LinkedIn</a> &middot;
+            <a href="https://github.com/iamarunbrahma" target="_blank" rel="noreferrer noopener">GitHub</a> &middot;
+            <a href="https://medium.com/@iamarunbrahma" target="_blank" rel="noreferrer noopener">Medium</a>
+          </p>
+        </div>
+      </header>
+
+      <hr />
+
+      <section id="about">
+        <p class="interests">
+          <span class="kicker">Research Interests</span>
+          Multi-agent systems &middot; Reinforcement learning (RLVR) &middot; Agentic RAG
+        </p>
+
+        <p>LLMs are reshaping every workflow, from code generation to RAG-powered enterprise search. I firmly believe Gen AI will democratize intelligence, amplify human creativity, and accelerate discovery to drive smarter decisions, equitable opportunity, and compounding prosperity worldwide.</p>
+        <p>I have a proven track record of building AI-enabled products and driving business growth in the finance, healthcare, and retail domains.</p>
+        <p>I am a Senior Machine Learning Engineer at Walmart, where I work on Gen AI initiatives, notably the Agentic AI Shopping Assistant.</p>
+        <p>Curious about my reading habits? Slide over to <a href="shelf.html">Bookshelf</a>.</p>
+      </section>
+
+      <hr />
+
+      <section id="work">
+        <h2>Work Experience</h2>
+
+        <div class="item">
+          <div class="item-head">
+            <img class="logo" src="assets/walmart.webp" alt="Walmart Global Tech logo" width="26" height="26" loading="lazy" />
+            <span class="item-title">Walmart Global Tech</span>
+          </div>
+          <ul>
+            <li>Developed a Shopping Assistant using multi-agent architecture and MCP protocol, orchestrating Text-to-SQL, Graph and RAG sub-agents for search, analytics, and automation.</li>
+            <li>Increased conversion rate by 37% across pilot categories through reliable intent routing, context retrieval, and automated workflows.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <img class="logo" src="assets/citi.webp" alt="Citi Bank logo" width="26" height="26" loading="lazy" />
+            <span class="item-title">Citi Bank</span>
+          </div>
+          <ul>
+            <li>Built an enterprise-grade Text to SQL conversational analytics platform using fine-tuned Llama model that would generate insights on complex financial data.</li>
+            <li>Automated SQL query generation to boost analyst productivity by 65% and ensure compliance with financial data governance.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <img class="logo" src="assets/carelon.webp" alt="Carelon Global Solutions logo" width="26" height="26" loading="lazy" />
+            <span class="item-title">Carelon Global Solutions</span>
+          </div>
+          <ul>
+            <li>Designed a scalable hybrid RAG application on health insurance policy documents using Qdrant for semantic retrieval and BM25 for sparse retrieval.</li>
+            <li>Achieved 23% improvement in customer satisfaction feedback compared to traditional chat support.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <img class="logo" src="assets/accenture.webp" alt="Accenture logo" width="26" height="26" loading="lazy" />
+            <span class="item-title">Accenture</span>
+          </div>
+          <ul>
+            <li>Implemented a scalable two-tower embedding model architecture to generate candidate product recommendations using user features and product features.</li>
+            <li>Improved click-through rate by 47% using new product recommendation pipeline thereby positively impacting the organization&rsquo;s top line.</li>
+          </ul>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="projects">
+        <h2>Personal Projects</h2>
+
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">Vision Parse: Parse PDF documents into Markdown content</span>
+            <span class="item-links">
+              <a href="https://github.com/iamarunbrahma/vision-parse" target="_blank" rel="noreferrer noopener">GitHub &#8599;</a>
+            </span>
+          </div>
+          <ul>
+            <li>Developed an open-source Python library translating scanned standard PDFs into markdown via Vision LLMs, capturing text, tables, images, LaTeX.</li>
+            <li>Benchmarked Vision Parse against Microsoft&rsquo;s MarkItDown across diverse PDFs, delivering 0.88 markdown accuracy, outperforming MarkItDown&rsquo;s 0.52 by 69%.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">Fine-tuning of open-source LLM using QLoRA</span>
+            <span class="item-links">
+              <a href="https://github.com/iamarunbrahma/finetuned-qlora-falcon7b-medical" target="_blank" rel="noreferrer noopener">GitHub &#8599;</a>
+              <a href="https://medium.com/@iamarunbrahma/fine-tuning-of-falcon-7b-large-language-model-using-qlora-on-mental-health-dataset-aa290eb6ec85" target="_blank" rel="noreferrer noopener">Medium &#8599;</a>
+            </span>
+          </div>
+          <ul>
+            <li>Trained a Falcon-7B LLM using Low-Rank Adaptation of Quantized LLMs (QLoRA) on mental health dialogues, stripping PII.</li>
+            <li>Achieved a ROUGE-1 score of 0.37 in generating relevant and empathetic responses for unseen mental health queries.</li>
+          </ul>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="beyond">
+        <h2>Beyond ML</h2>
+
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">The Fifth Salary Rule</span>
+            <span class="item-links">
+              <a href="https://www.amazon.in/Fifth-Salary-Rule-Indian-Professional-ebook/dp/B0GGW4TWNK" target="_blank" rel="noreferrer noopener">Amazon &#8599;</a>
+            </span>
+          </div>
+          <p>Wrote a book for young Indian professionals on guarding the invisible salary of attention, energy, judgement, time, and calm that quietly decides what the visible paycheck becomes in the AI age.</p>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">Gambit</span>
+            <span class="item-links">
+              <a href="https://chess.arunbrahma.com" target="_blank" rel="noreferrer noopener">Website &#8599;</a>
+              <a href="https://github.com/iamarunbrahma/chess" target="_blank" rel="noreferrer noopener">GitHub &#8599;</a>
+            </span>
+          </div>
+          <p>Built a no-login browser chess app to play a tuned engine across ten levels or practice with live Stockfish analysis, with a Gemini Vision feature that turns a screenshot of any board into an editable position.</p>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">Purr</span>
+            <span class="item-links">
+              <a href="https://purr.arunbrahma.com" target="_blank" rel="noreferrer noopener">Website &#8599;</a>
+              <a href="https://github.com/iamarunbrahma/purr" target="_blank" rel="noreferrer noopener">GitHub &#8599;</a>
+            </span>
+          </div>
+          <p>Built a free, open-source macOS dictation app that turns speech into text entirely on-device on the Apple Neural Engine, with no cloud, accounts, or telemetry.</p>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <span class="item-title">Google UX Research</span>
+          </div>
+          <p>Take part as a recurring Google UX Research participant since 2024, sharing feedback on early AI/ML and Google Cloud products including BigQuery, Notebooks, and the Gemini CLI.</p>
+        </div>
+      </section>
+
+      <footer>
+        Say hello at <a href="mailto:contact@arunbrahma.com">contact@arunbrahma.com</a>
+      </footer>
+    </main>
+  </body>
+</html>
